@@ -1,6 +1,18 @@
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+
+// import state , then clg it first, then display number of items
+import { useSelector } from "react-redux";
 const Navbar = () => {
+  const cart = useSelector((state) => state.cart);
+
+  const getTotalQuantity = () => {
+    let total = 0;
+    cart.forEach((item) => {
+      total += item.quantity;
+    });
+    return total;
+  };
   return (
     <div className="bg-black text-white py-12 px-8">
       <h1 className="text-center text-8xl text-[#46ffd3] font-bold">FakeStore</h1>
@@ -14,9 +26,10 @@ const Navbar = () => {
         <li>
           <Link to={"/contact"}>Contact</Link>
         </li>
-        <li className="outline flex items-center justify-center">
+        <li className=" bg-white relative border border-red-800 flex text-black rounded-full p-4 items-center justify-center">
           <Link to={"/cart"}>
-            <FaShoppingCart />
+            <FaShoppingCart color="black" />
+            <p className="absolute outline left-0 bottom-0">{getTotalQuantity() || 0}</p>
           </Link>
         </li>
       </ul>
