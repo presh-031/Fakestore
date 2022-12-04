@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
-      <p>FakeStore</p>
+      <p className="border border-red-800">FakeStore</p>
       <ul>
         <li>
           <Link to="/">Home</Link>
