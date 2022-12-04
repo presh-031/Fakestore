@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import CartItem from "../components/CartItem";
 
+import { useNavigate } from "react-router-dom";
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
 
@@ -15,7 +16,8 @@ const Cart = () => {
     return { totalPrice, totalQuantity };
   };
 
-  console.log(cart);
+  // Initialize navigate
+  const navigate = useNavigate();
   return (
     <div className="px-12">
       <h2 className="text-4xl my-8 text-center font-semibold">Your shopping cart:</h2>
@@ -37,7 +39,14 @@ const Cart = () => {
       {/* checkout btn should show order successful popup, and close btn that goes back to homepage */}
       <button className="block bg-[#46ffd3]  mb-8 w-[100%] py-4 text-3xl font-semibold">Checkout</button>
       {/* Close btn should navigate back -1  */}
-      <button className="block  bg-[#ff9999] mb-8 w-[100%] py-4 text-3xl font-semibold">Close</button>
+      <button
+        onClick={() => {
+          navigate(-1);
+        }}
+        className="block  bg-[#ff9999] mb-8 w-[100%] py-4 text-3xl font-semibold"
+      >
+        Close
+      </button>
     </div>
   );
 };
