@@ -17,8 +17,8 @@ const Cart = () => {
 
   console.log(cart);
   return (
-    <div className="px-4">
-      <h2 className="text-4xl text-center font-semibold">Your shopping cart</h2>
+    <div className="px-12">
+      <h2 className="text-4xl my-8 text-center font-semibold">Your shopping cart:</h2>
       <div className="">
         {cart?.map((item) => (
           <CartItem
@@ -31,11 +31,11 @@ const Cart = () => {
           />
         ))}
       </div>
-      <p>
-        Total ({getTotal().totalQuantity} items) : <strong>${getTotal().totalPrice.toFixed(2)}</strong>
+      <p className="text-center text-4xl mb-14 font-semibold">
+        Total ({getTotal().totalQuantity} items) : ${getTotal().totalPrice.toFixed(2)}
       </p>
-      <button>Checkout</button>
-      <button>Close</button>
+      <button className="block bg-[#46ffd3]  mb-8 w-[100%] py-4 text-3xl font-semibold">Checkout</button>
+      <button className="block  bg-[#ff9999] mb-8 w-[100%] py-4 text-3xl font-semibold">Close</button>
     </div>
   );
 };
