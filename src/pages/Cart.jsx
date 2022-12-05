@@ -40,7 +40,7 @@ const Cart = () => {
         onClick={() => {
           alert("Thanks for stopping by!");
         }}
-        className="block bg-[##46d7ff]  mb-8 w-[100%] py-4 text-3xl font-semibold"
+        className="block bg-[#46d7ff]  mb-8 w-[100%] py-4 text-3xl font-semibold"
       >
         Checkout
       </button>
