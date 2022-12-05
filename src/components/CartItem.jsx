@@ -8,7 +8,7 @@ const CartItem = ({ id, image, title, price, quantity = 0 }) => {
   return (
     <div className=" mb-16 flex ">
       <div>
-        <img className="h-48 w-36" src={image} alt="product" />
+        <img className="h-48 w-36 object-contain" src={image} alt="product" />
       </div>
       <div className="flex-1   ">
         <div className="w-[18rem] h-[100%] flex flex-col justify-between  mx-auto text-center">

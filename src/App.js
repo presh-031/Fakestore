@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Cart from "./pages/Cart";
 import Footer from "./components/Footer";
+import Error from "./pages/Error";
 
 const queryClient = new QueryClient();
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/products" element={<Products />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="*" element={<Error />} />
           </Routes>
         </Router>
         {/* Keep footer at btm of page */}

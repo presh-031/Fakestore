@@ -26,8 +26,11 @@ const Navbar = () => {
         <li>
           <Link to={"/contact"}>Contact</Link>
         </li>
-        <li className=" bg-white relative  flex text-black rounded-full p-6 items-center justify-center">
-          <Link to={"/cart"}>
+        <li>
+          <Link
+            to={"/cart"}
+            className=" bg-white relative  flex text-black rounded-full p-6 items-center justify-center"
+          >
             <FaShoppingCart color="black" />
             <div className="absolute text-xl h-8 w-8 bg-[#ff9999] flex items-center justify-center rounded-full  left-0 bottom-0">
               <span>{getTotalQuantity() || 0}</span>
