@@ -15,8 +15,8 @@ const Navbar = () => {
   };
   return (
     <div className="bg-black text-white py-12 px-8">
-      <h1 className="text-center text-8xl text-[#46ffd3] font-bold">FakeStore</h1>
-      <ul className="text-4xl flex items-center justify-around mt-8 border border-red-800">
+      <h1 className="text-center text-8xl text-[#46ffd3] font-bold">Items-Store</h1>
+      <ul className="text-4xl flex items-center justify-around mt-8">
         <li>
           <Link to="/">Home</Link>
         </li>

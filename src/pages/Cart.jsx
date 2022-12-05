@@ -36,9 +36,14 @@ const Cart = () => {
       <p className="text-center text-4xl mb-14 font-semibold">
         Total ({getTotal().totalQuantity} items) : ${getTotal().totalPrice.toFixed(2)}
       </p>
-      {/* checkout btn should show order successful popup, and close btn that goes back to homepage */}
-      <button className="block bg-[#46ffd3]  mb-8 w-[100%] py-4 text-3xl font-semibold">Checkout</button>
-      {/* Close btn should navigate back -1  */}
+      <button
+        onClick={() => {
+          alert("Thanks for stopping by!");
+        }}
+        className="block bg-[#46ffd3]  mb-8 w-[100%] py-4 text-3xl font-semibold"
+      >
+        Checkout
+      </button>
       <button
         onClick={() => {
           navigate(-1);
