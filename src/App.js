@@ -9,6 +9,7 @@ import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Cart from "./pages/Cart";
+import Footer from "./components/Footer";
 
 const queryClient = new QueryClient();
 const App = () => {
@@ -24,6 +25,8 @@ const App = () => {
             <Route path="/cart" element={<Cart />} />
           </Routes>
         </Router>
+        {/* Keep footer at btm of page */}
+        <Footer />
       </div>
     </QueryClientProvider>
   );
