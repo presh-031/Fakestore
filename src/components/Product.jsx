@@ -10,14 +10,14 @@ const Product = ({ product }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl border-[1px] border-gray-400">
-      <div className="  py-4  flex justify-center items-center">
-        <img className=" w-[12rem] h-[14rem] object-contain" src={product.image} alt="product" />
+    <div className="rounded-xl border-[1px] border-gray-400 bg-white sm:flex sm:flex-col sm:justify-between">
+      <div className="  flex  items-center justify-center py-4">
+        <img className=" h-[14rem] w-[12rem] object-contain" src={product.image} alt="product" />
       </div>
       <div className="border-top-[1px] border-top-gray-400 p-4">
-        <p className="font-bold text-2xl mb-4 leading-[2rem]">{product.title}</p>
+        <p className="mb-4 text-2xl font-bold leading-[2rem]">{product.title}</p>
         <p className="mb-4 text-xl font-medium">${product.price}</p>
-        <button onClick={handleClick} className="text-white text-2xl bg-black w-[100%] py-4 font-bold ">
+        <button onClick={handleClick} className="w-[100%] bg-black py-4 text-2xl font-bold text-white ">
           Add to cart
         </button>
       </div>

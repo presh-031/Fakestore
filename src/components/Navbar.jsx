@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 // import state , then clg it first, then display number of items
 import { useSelector } from "react-redux";
@@ -13,10 +14,19 @@ const Navbar = () => {
     });
     return total;
   };
+  // Initialize navigate
+  const navigate = useNavigate();
   return (
-    <div className="bg-black text-white py-12 px-8">
-      <h1 className="text-center text-8xl text-[#46d7ff] font-bold">FakeStore</h1>
-      <ul className="text-4xl flex items-center justify-around mt-8">
+    <div className="bg-black py-12 px-8 text-white md:flex md:items-center md:justify-between md:px-12">
+      <h1
+        onClick={() => {
+          navigate("/");
+        }}
+        className="cursor-pointer text-center text-6xl font-bold text-[#46d7ff] sm:text-8xl"
+      >
+        FakeStore
+      </h1>
+      <ul className="mt-8 flex items-center justify-around text-3xl sm:text-4xl md:gap-8">
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -29,10 +39,10 @@ const Navbar = () => {
         <li>
           <Link
             to={"/cart"}
-            className=" bg-white relative  flex text-black rounded-full p-6 items-center justify-center"
+            className=" relative flex  items-center justify-center rounded-full bg-white p-6 text-black"
           >
             <FaShoppingCart color="black" />
-            <div className="absolute text-xl h-8 w-8 bg-[#ff9999] flex items-center justify-center rounded-full  left-0 bottom-0">
+            <div className="absolute left-0 bottom-0 flex h-8 w-8 items-center justify-center rounded-full  bg-[#ff9999] text-xl">
               <span>{getTotalQuantity() || 0}</span>
             </div>
           </Link>

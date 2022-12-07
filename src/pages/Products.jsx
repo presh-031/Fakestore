@@ -13,7 +13,7 @@ const Products = () => {
   if (error) return "An error has occurred: " + error.message;
 
   return (
-    <div className="p-24 flex bg-[rgb(184, 184, 184)] flex-col gap-12">
+    <div className="bg-[rgb(184, 184, 184)] flex flex-col gap-12 p-24 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {data.map((product) => (
         <Product key={product.id} product={product} />
       ))}
