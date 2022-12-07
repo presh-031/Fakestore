@@ -19,8 +19,8 @@ const Cart = () => {
   // Initialize navigate
   const navigate = useNavigate();
   return (
-    <div className="mx-auto max-w-[80rem] px-12 outline sm:px-24">
-      <h2 className="my-8 text-center text-4xl font-semibold">Your shopping cart:</h2>
+    <div className="mx-auto max-w-[80rem] px-12  sm:px-24">
+      <h2 className="my-8 text-center text-4xl font-semibold sm:text-6xl">Your shopping cart:</h2>
       <div className="">
         {cart?.map((item) => (
           <CartItem
