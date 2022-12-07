@@ -1,11 +1,20 @@
-import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="text-center px-8">
-      <p className="mt-16 font-medium text-2xl">BEST ONLINE STORE OF THE YEAR</p>
-      <h2 className="mt-8 font-semibold  leading-loose text-6xl">We don't do fashion, we are fashion. </h2>
-      <button className="bg-black text-white text-6xl font-bold p-8 my-4  rounded-full">Shop now</button>
+    <div className="px-8 text-center">
+      <p className="mt-16 text-2xl font-medium">BEST ONLINE STORE OF THE YEAR</p>
+      <h2 className="mt-8 text-6xl  font-semibold leading-loose">We don't do fashion, we are fashion. </h2>
+      <button
+        onClick={() => {
+          navigate("/products");
+        }}
+        className="my-4 rounded-full bg-black p-8 text-6xl font-bold  text-white"
+      >
+        Shop now
+      </button>
     </div>
   );
 };
