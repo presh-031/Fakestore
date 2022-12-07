@@ -1,6 +1,3 @@
-import { useState } from "react";
-import axios from "axios";
-
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -16,7 +13,7 @@ const queryClient = new QueryClient();
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <div>
+      <div className="mx-auto max-w-[1700px]">
         <Router>
           <Navbar />
           <Routes>
