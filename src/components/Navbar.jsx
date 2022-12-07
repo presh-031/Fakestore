@@ -26,8 +26,8 @@ const Navbar = () => {
       >
         FakeStore
       </h1>
-      <ul className="mt-8 flex items-center justify-around text-3xl sm:text-4xl md:gap-8">
-        <li>
+      <ul className="mt-8 flex items-center justify-around text-3xl sm:text-4xl md:mt-0 md:gap-8">
+        <li className=" transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-[#ff9999]">
           <Link to="/">Home</Link>
         </li>
         <li>
