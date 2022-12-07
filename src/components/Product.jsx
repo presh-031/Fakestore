@@ -12,7 +12,11 @@ const Product = ({ product }) => {
   return (
     <div className="rounded-xl border-[1px] border-gray-400 bg-white sm:flex sm:flex-col sm:justify-between">
       <div className="  flex  items-center justify-center py-4">
-        <img className=" h-[14rem] w-[12rem] object-contain" src={product.image} alt="product" />
+        <img
+          className=" h-[14rem] w-[12rem] object-contain  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
+          src={product.image}
+          alt="product"
+        />
       </div>
       <div className="border-top-[1px] border-top-gray-400 p-4">
         <p className="mb-4 text-2xl font-bold leading-[2rem]">{product.title}</p>
