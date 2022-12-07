@@ -19,8 +19,8 @@ const Cart = () => {
   // Initialize navigate
   const navigate = useNavigate();
   return (
-    <div className="px-12">
-      <h2 className="text-4xl my-8 text-center font-semibold">Your shopping cart:</h2>
+    <div className="mx-auto max-w-[80rem] px-12 outline sm:px-24">
+      <h2 className="my-8 text-center text-4xl font-semibold">Your shopping cart:</h2>
       <div className="">
         {cart?.map((item) => (
           <CartItem
@@ -33,14 +33,14 @@ const Cart = () => {
           />
         ))}
       </div>
-      <p className="text-center text-4xl mb-14 font-semibold">
+      <p className="mb-14 text-center text-4xl font-semibold">
         Total ({getTotal().totalQuantity} items) : ${getTotal().totalPrice.toFixed(2)}
       </p>
       <button
         onClick={() => {
           alert("Thanks for stopping by!");
         }}
-        className="block bg-[#46d7ff]  mb-8 w-[100%] py-4 text-3xl font-semibold"
+        className="mb-8 block  w-[100%] bg-[#46d7ff] py-4 text-3xl font-semibold"
       >
         Checkout
       </button>
@@ -48,7 +48,7 @@ const Cart = () => {
         onClick={() => {
           navigate(-1);
         }}
-        className="block  bg-[#ff9999] mb-8 w-[100%] py-4 text-3xl font-semibold"
+        className="mb-8  block w-[100%] bg-[#ff9999] py-4 text-3xl font-semibold"
       >
         Close
       </button>

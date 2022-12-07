@@ -17,12 +17,12 @@ const Navbar = () => {
   // Initialize navigate
   const navigate = useNavigate();
   return (
-    <div className="bg-black py-12 px-8 text-white md:flex md:items-center md:justify-between md:px-12">
+    <div className="bg-black py-12 px-8 text-white md:flex md:items-center md:justify-between">
       <h1
         onClick={() => {
           navigate("/");
         }}
-        className="cursor-pointer text-center text-6xl font-bold text-[#46d7ff] sm:text-8xl"
+        className="cursor-pointer text-center text-6xl font-bold text-[#46d7ff] sm:text-7xl md:text-8xl"
       >
         FakeStore
       </h1>
