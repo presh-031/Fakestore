@@ -1,13 +1,13 @@
 import { QueryClient, QueryClientProvider } from "react-query";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Products from "./pages/Products";
-import Contact from "./pages/Contact";
-import Navbar from "./components/Navbar";
 import Cart from "./pages/Cart";
-import Footer from "./components/Footer";
+import Contact from "./pages/Contact";
 import Error from "./pages/Error";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
+import Products from "./pages/Products";
 
 const queryClient = new QueryClient();
 const App = () => {
@@ -24,7 +24,6 @@ const App = () => {
             <Route path="*" element={<Error />} />
           </Routes>
         </Router>
-        {/* Keep footer at btm of page */}
         <Footer />
       </div>
     </QueryClientProvider>
