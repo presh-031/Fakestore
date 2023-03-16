@@ -4,7 +4,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className=" px-8  md:mt-32 md:flex">
+    <div className=" px-8  md:mt-32 md:flex md:px-20 xl:px-44">
       <div className="text-center  md:flex-1 md:text-left">
         <p className="mt-16 text-2xl font-medium">
           BEST ONLINE STORE OF THE YEAR
@@ -22,7 +22,11 @@ const Home = () => {
         </button>
       </div>
       <div className="hidden  md:block md:flex-1">
-        <img src={bgImg} alt="background" className="h-full" />
+        <img
+          src={bgImg}
+          alt="background"
+          className="h-full object-cover sm:object-left"
+        />
       </div>
     </div>
   );

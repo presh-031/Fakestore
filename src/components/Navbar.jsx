@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
+import { FaShoppingCart } from "react-icons/fa";
 // import state , then clg it first, then display number of items
 import { useSelector } from "react-redux";
+
 const Navbar = () => {
   const cart = useSelector((state) => state.cart);
 
@@ -17,16 +17,16 @@ const Navbar = () => {
   // Initialize navigate
   const navigate = useNavigate();
   return (
-    <div className="bg-black py-12 px-8 text-white md:flex md:items-center md:justify-between">
+    <div className="bg-black py-12 px-8 text-white md:flex md:items-center md:justify-between md:px-20 xl:px-44">
       <h1
         onClick={() => {
           navigate("/");
         }}
-        className="cursor-pointer text-center text-6xl font-bold text-[#46d7ff] sm:text-7xl md:text-8xl"
+        className="cursor-pointer text-center text-6xl font-bold text-[#46d7ff] sm:text-7xl xl:text-8xl"
       >
         FakeStore
       </h1>
-      <ul className="mt-8 flex items-center justify-around text-3xl sm:text-4xl md:mt-0 md:gap-8">
+      <ul className="mt-8 flex items-center justify-around text-3xl sm:text-4xl md:mt-0 md:gap-8 md:text-3xl xl:text-4xl">
         <li className=" transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-[#46d7ff]">
           <Link to="/">Home</Link>
         </li>
