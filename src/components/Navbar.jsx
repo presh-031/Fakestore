@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { FaShoppingCart } from "react-icons/fa";
-import { emptyCart } from "../features/cart/cartSlice";
 
 const Navbar = () => {
   const cart = useSelector((state) => state.cart);
@@ -47,14 +46,6 @@ const Navbar = () => {
               <span>{getTotalQuantity() || 0}</span>
             </div>
           </Link>
-          <p
-            onClick={() => {
-              dispatch(emptyCart());
-              // setCartIsOpen((prevCartIsOpen) => !prevCartIsOpen);
-            }}
-          >
-            empty
-          </p>
         </li>
       </ul>
     </div>
