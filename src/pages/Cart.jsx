@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import CartItem from "../components/CartItem";
 
-import { useNavigate } from "react-router-dom";
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
 
@@ -16,6 +16,7 @@ const Cart = () => {
     return { totalPrice, totalQuantity };
   };
 
+  console.log(cart);
   // Initialize navigate
   const navigate = useNavigate();
   return (
@@ -28,7 +29,7 @@ const Cart = () => {
           <CartItem
             key={item.id}
             id={item.id}
-            image={item.image[0]}
+            image={item.images[0]}
             title={item.title}
             price={item.price}
             quantity={item.quantity}
