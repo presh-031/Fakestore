@@ -1,8 +1,18 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { cartReducer } from "../features/cart/cartSlice";
-import storage from "redux-persist/lib/storage";
+import {
+  FLUSH,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+  REHYDRATE,
+  persistReducer,
+  persistStore,
+} from "redux-persist";
 
-import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from "redux-persist";
+import { configureStore } from "@reduxjs/toolkit";
+import storage from "redux-persist/lib/storage";
+import { cartReducer } from "../features/cart/cartSlice";
+
 const persistConfig = {
   key: "root",
   storage,

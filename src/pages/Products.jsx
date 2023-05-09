@@ -4,7 +4,10 @@ import Product from "../components/Product";
 
 const Products = () => {
   const { isLoading, error, data } = useQuery("fake-products", () =>
-    fetch("https://fakestoreapi.com/products").then((res) => res.json())
+    // fetch("https://fakestoreapi.com/products").then((res) => res.json())
+    fetch("https://api.escuelajs.co/api/v1/products/?categoryId=1").then(
+      (res) => res.json()
+    )
   );
 
   if (isLoading)

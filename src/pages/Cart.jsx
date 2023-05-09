@@ -20,13 +20,15 @@ const Cart = () => {
   const navigate = useNavigate();
   return (
     <div className="mx-auto max-w-[80rem] px-12  sm:px-24">
-      <h2 className="my-8 text-center text-4xl font-semibold sm:text-6xl">Your shopping cart:</h2>
+      <h2 className="my-8 text-center text-4xl font-semibold sm:text-6xl">
+        Your shopping cart:
+      </h2>
       <div className="">
         {cart?.map((item) => (
           <CartItem
             key={item.id}
             id={item.id}
-            image={item.image}
+            image={item.image[0]}
             title={item.title}
             price={item.price}
             quantity={item.quantity}
@@ -34,7 +36,8 @@ const Cart = () => {
         ))}
       </div>
       <p className="mb-14 text-center text-4xl font-semibold">
-        Total ({getTotal().totalQuantity} items) : ${getTotal().totalPrice.toFixed(2)}
+        Total ({getTotal().totalQuantity} items) : $
+        {getTotal().totalPrice.toFixed(2)}
       </p>
       <button
         onClick={() => {
