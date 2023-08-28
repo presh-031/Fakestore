@@ -14,7 +14,7 @@ const Product = ({ product }) => {
       <div className="  flex  items-center justify-center py-4">
         <img
           className=" h-[14rem] w-[12rem] object-contain  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
-          src={product.images[0]}
+          src={product.image}
           alt="product"
         />
       </div>
