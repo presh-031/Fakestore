@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const getTotalQuantity = () => {
@@ -14,8 +16,7 @@ const Navbar = () => {
     });
     return total;
   };
-  // Initialize navigate
-  const navigate = useNavigate();
+  
   return (
     <div className="bg-black py-12 px-8 text-white md:flex md:items-center md:justify-between md:px-20 xl:px-44">
       <h1

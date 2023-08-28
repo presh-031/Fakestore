@@ -9,7 +9,6 @@ import { useDispatch } from "react-redux";
 
 const CartItem = ({ id, image, title, price, quantity = 0 }) => {
   const dispatch = useDispatch();
-  console.log(id, image, title, price, quantity);
   return (
     <div className=" mb-16 flex sm:mx-auto sm:justify-center sm:gap-8">
       <div>

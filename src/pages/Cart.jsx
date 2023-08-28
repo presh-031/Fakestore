@@ -16,9 +16,9 @@ const Cart = () => {
     return { totalPrice, totalQuantity };
   };
 
-  console.log(cart);
   // Initialize navigate
   const navigate = useNavigate();
+  
   return (
     <div className="mx-auto max-w-[80rem] px-12  sm:px-24">
       <h2 className="my-8 text-center text-4xl font-semibold sm:text-6xl">
@@ -29,7 +29,7 @@ const Cart = () => {
           <CartItem
             key={item.id}
             id={item.id}
-            image={item.images[0]}
+            image={item.image}
             title={item.title}
             price={item.price}
             quantity={item.quantity}
