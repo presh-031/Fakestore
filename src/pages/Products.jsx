@@ -4,10 +4,10 @@ import Product from "../components/Product";
 
 const Products = () => {
   const { isLoading, error, data } = useQuery("fake-products", () =>
-    // fetch("https://fakestoreapi.com/products").then((res) => res.json())
-    fetch("https://api.escuelajs.co/api/v1/products/?categoryId=1").then(
-      (res) => res.json()
-    )
+    fetch("https://fakestoreapi.com/products").then((res) => res.json())
+    // fetch("https://api.escuelajs.co/api/v1/products/?categoryId=1").then(
+    //   (res) => res.json()
+    // )
   );
 
   if (isLoading)
@@ -24,7 +24,7 @@ const Products = () => {
       </p>
     );
 
-  // console.log(data);
+  
   return (
     <div className="bg-[rgb(184, 184, 184)] flex flex-col gap-12 p-24 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {data?.map((product) => (
